@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\git repo\AutoEcoAxis"/>
 			<item value="C:\Users\HP\Documents\GitHub\luckiraj_fw16-367\EcoAxisAuto"/>
 		</list>
 		<list key="projectNameTemplate">

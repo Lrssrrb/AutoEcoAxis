@@ -89,6 +89,9 @@ public class EnergyServiceImpl implements EnergyService{
 	
 	public List<EnergyMeter> getAllConsumption() {
         List<EnergyMeter> readings = energyMeterRepository.findAllByOrderByTimeStampAsc();
+        for (EnergyMeter energyMeter : readings) {
+        	System.out.println(energyMeter);
+        }
         return readings;
     }
 	
@@ -101,6 +104,7 @@ public class EnergyServiceImpl implements EnergyService{
         	newResult.setHour(energyMeter.getTimeStamp().getHour());
         	newResult.setMinut(energyMeter.getTimeStamp().getMinute());
         	newResult.setValue(energyMeter.getValue());
+        	System.out.println(newResult);
         	results.add(newResult);
 		}
         return results;
