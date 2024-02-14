@@ -37,20 +37,11 @@ public class EnergyServiceImpl implements EnergyService{
             value+=(random.nextFloat() * 10);
             float minuteValue = value;
             
-            if(timestamp.getMinute() == 0) {
-           	 EnergyMeter energyMeter = new EnergyMeter();
-                energyMeter.setTimeStamp(timestamp);
-                energyMeter.setValue(minuteValue);
+       	 	EnergyMeter energyMeter = new EnergyMeter();
+            energyMeter.setTimeStamp(timestamp);
+            energyMeter.setValue(minuteValue);
 
-                energyMeterRepository.save(energyMeter);
-            }
-            else {
-           	 EnergyMeter energyMeter = new EnergyMeter();
-                energyMeter.setTimeStamp(timestamp);
-                energyMeter.setValue(minuteValue);
-
-                energyMeterRepository.save(energyMeter);
-            }
+            energyMeterRepository.save(energyMeter);
         }
     }
     
@@ -89,9 +80,6 @@ public class EnergyServiceImpl implements EnergyService{
 	
 	public List<EnergyMeter> getAllConsumption() {
         List<EnergyMeter> readings = energyMeterRepository.findAllByOrderByTimeStampAsc();
-        for (EnergyMeter energyMeter : readings) {
-        	System.out.println(energyMeter);
-        }
         return readings;
     }
 	
