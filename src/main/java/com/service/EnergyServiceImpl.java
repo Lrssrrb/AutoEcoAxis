@@ -90,7 +90,7 @@ public class EnergyServiceImpl implements EnergyService{
         	ResultFormate newResult = new ResultFormate();
         	newResult.setTimeStamp(energyMeter.getTimeStamp());
         	newResult.setHour(energyMeter.getTimeStamp().getHour());
-        	newResult.setMinut(energyMeter.getTimeStamp().getMinute());
+        	newResult.setMinute(energyMeter.getTimeStamp().getMinute());
         	newResult.setValue(energyMeter.getValue());
         	System.out.println(newResult);
         	results.add(newResult);

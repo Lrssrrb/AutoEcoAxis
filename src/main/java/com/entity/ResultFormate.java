@@ -9,7 +9,7 @@ public class ResultFormate {
 
     private LocalDateTime timeStamp;
 
-    private int minut;
+    private int minute;
     
 	private int hour;
 	
